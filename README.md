@@ -1,9 +1,4 @@
 ecalculator
 =====
 
-An OTP library
-
-Build
------
-
-    $ rebar3 compile
+Simple project to play with leex and yecc.
