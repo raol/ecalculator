@@ -22,6 +22,12 @@ operator_precedence_test() ->
         {number, 3}},
         parse("1 * 2 / 3")).
 
+parentheses_test() ->
+    ?assertEqual({mult, 
+        {number, 1},
+        {add, {number, 2}, {number, 3}}},
+        parse("1 * (2 + 3)")).
+
 parse(Str) ->
     Tokens = tokens(Str),
     unwrap(calculator_parser:parse(Tokens)).
