@@ -12,7 +12,7 @@
 -export([format_error/1]).
 
 %% User code. This is placed here to allow extra attributes.
--file("./calculator_lexer.xrl", 21).
+-file("./calculator_lexer.xrl", 20).
 
 -file("/usr/local/Cellar/erlang/19.3/lib/erlang/lib/parsetools-2.1.4/include/leexinc.hrl", 14).
 
@@ -396,52 +396,52 @@ yyaction(9, _, _, _) ->
 yyaction(_, _, _, _) -> error.
 
 -compile({inline,yyaction_0/2}).
--file("./calculator_lexer.xrl", 8).
+-file("./calculator_lexer.xrl", 7).
 yyaction_0(TokenChars, TokenLine) ->
      { token, { var, TokenLine, list_to_atom (TokenChars) } } .
 
 -compile({inline,yyaction_1/2}).
--file("./calculator_lexer.xrl", 9).
+-file("./calculator_lexer.xrl", 8).
 yyaction_1(TokenChars, TokenLine) ->
      { token, { number, TokenLine, list_to_integer (TokenChars) } } .
 
 -compile({inline,yyaction_2/1}).
--file("./calculator_lexer.xrl", 10).
+-file("./calculator_lexer.xrl", 9).
 yyaction_2(TokenLine) ->
      { token, { plus, TokenLine } } .
 
 -compile({inline,yyaction_3/1}).
--file("./calculator_lexer.xrl", 11).
+-file("./calculator_lexer.xrl", 10).
 yyaction_3(TokenLine) ->
      { token, { minus, TokenLine } } .
 
 -compile({inline,yyaction_4/1}).
--file("./calculator_lexer.xrl", 12).
+-file("./calculator_lexer.xrl", 11).
 yyaction_4(TokenLine) ->
      { token, { mult, TokenLine } } .
 
 -compile({inline,yyaction_5/1}).
--file("./calculator_lexer.xrl", 13).
+-file("./calculator_lexer.xrl", 12).
 yyaction_5(TokenLine) ->
      { token, { divd, TokenLine } } .
 
 -compile({inline,yyaction_6/1}).
--file("./calculator_lexer.xrl", 14).
+-file("./calculator_lexer.xrl", 13).
 yyaction_6(TokenLine) ->
      { token, { lparen, TokenLine } } .
 
 -compile({inline,yyaction_7/1}).
--file("./calculator_lexer.xrl", 15).
+-file("./calculator_lexer.xrl", 14).
 yyaction_7(TokenLine) ->
      { token, { rparen, TokenLine } } .
 
 -compile({inline,yyaction_8/0}).
--file("./calculator_lexer.xrl", 16).
+-file("./calculator_lexer.xrl", 15).
 yyaction_8() ->
      skip_token .
 
 -compile({inline,yyaction_9/0}).
--file("./calculator_lexer.xrl", 17).
+-file("./calculator_lexer.xrl", 16).
 yyaction_9() ->
      skip_token .
 
